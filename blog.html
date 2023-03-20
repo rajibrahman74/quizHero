@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+      Googe font is associated with HTML
+     -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- 
+      Tailwind CDN link is associated with HTML
+     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blog - Quiz Hero</title>
+    <!-- 
+        Tailwind css JS cdn link is associated with HMTL
+     -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+      Config the custome CSS style in Tailwind
+     -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        common: ["Rubik", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    
+</head>
+
+<body class="bg-[#f2f2f2] font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+        <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+                <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+                <p class="text-[10px] font-normal capitalize -mt-1">
+                    Get ready to Read our blogs!
+                </p>
+            </div>
+            <a href="index.html">
+                <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+                    Home
+                </button>
+            </a>
+        </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- blog content start -->
+    <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto space-y-7">
+        <h1 class="text-center my-8 text-xl">Welcome to our blogs</h1>
+
+        <!-- First Question Answer -->
+        <div class="p-8 bg-white rounded-lg flex flex-col gap-5">
+            <h2 class="font-semibold text-lg">01. What is the difference between map, filter, forEach and find?</h2>
+
+            <!-- Map mathods -->
+            <p class="text-[16px]">➡️ <span class="font-bold">map():</span> The map method calls a function on each
+                element of the original array and creates a new array, the array that it is called on will stay still.
+                This function is useful for adding minor changes to an already existing array.
+                <br>
+                <span class="font-bold">syntax:</span> map(function, iterable, ...)
+            </p>
+
+            <!-- filter methods -->
+            <p class="text-[16px]">➡️ <span class="font-bold">filter():</span> filter() is used to create a new array
+                with all elements that pass the given test implemented by the callback function. The original array is
+                not modified. This function returns an array of found results, if any, even if only 1 match is found. If
+                a function finds no match, it simply returns an empty array.
+                <br>
+                <span class="font-bold">syntax:</span> arr.filter(callback(element[, index[, array]])[, thisArg])
+            </p>
+
+            <!-- forEach methods -->
+            <p class="text-[16px]">➡️ <span class="font-bold">forEach():</span> forEach() is used to execute the given
+                function once for each element of the array. It does not return a new array. This function takes 1
+                parameter. Each(callback) parameter callback can take up to 3 parameters element, index and array (but
+                only element parameter is required, rest is optional).
+                <br>
+                <span class="font-bold">syntax:</span> arr.forEach(callback(currentValue[, index[, array]])[, thisArg])
+            </p>
+
+            <!-- find methods -->
+            <p class="text-[16px]">➡️ <span class="font-bold">find():</span> find() is used to return the value of the
+                first element of the array that satisfies the given testing function. It returns undefined if no
+                component tests pass. It does not change the original array. Like the .forEach() function, this function
+                also takes only 1 parameter .find(callback).
+                <br>
+                <span class="font-bold">syntax:</span> arr.find(callback(element[, index[, array]])[, thisArg])
+            </p>
+        </div>
+
+
+        <!-- Second Question Answer-->
+        <div class="p-8 bg-white rounded-lg flex flex-col gap-5">
+            <h2 class="font-semibold text-lg">02. What is the difference between Local Storage, Session Storage and
+                Cookies?</h2>
+
+            <!-- Local Storage -->
+            <p class="text-[16px]">➡️ <span class="font-bold">Local Storage:</span> Local storage is useful for storing
+                data that the user will need to access later, such as offline data.
+                <br>
+                <span class="font-bold">syntax:</span> localStorage.setItem('key', 'value');
+            </p>
+
+            <!-- Session Storage -->
+            <p class="text-[16px]">➡️ <span class="font-bold">Session Storage:</span> Session storage is a great way to
+                improve the performance of your web applications.
+                <br>
+                <span class="font-bold">syntax:</span> essionStorage.setItem('key', 'value');
+            </p>
+
+            <!-- Cookies -->
+            <p class="text-[16px]">➡️ <span class="font-bold">Cookies</span> Cookies are a good choice for storing data
+                that should not be persisted for a long time, such as session IDs.
+                <br>
+                <span class="font-bold">syntax:</span> document.cookie = "cookieName=cookieValue; expires=Thu, 01 Jan
+                2026 00:00:00 UTC; path=/";
+            </p>
+        </div>
+
+
+        <!-- Third Question Answer -->
+        <div class="p-8 bg-white rounded-lg flex flex-col gap-5">
+            <h2 class="font-semibold text-lg">03. What is the event loop and how does it work?</h2>
+
+            <!-- Event Loop -->
+            <p class="text-[16px]">➡️ <span class="font-bold">Even Loop:</span> The event loop works by making a request
+                to some internal or external "event provider" (that generally blocks the request until an event has
+                arrived), then calls the relevant event handler ("dispatches the event"). The event loop works by
+                constantly monitoring the call stack and the message queue. The call stack is a data structure that
+                keeps track of function calls in the program, while the message queue is a data structure that holds
+                messages or events that are waiting to be processed.
+                <br>
+                <span class="font-bold">syntax:</span>
+                setTimeout(function() {
+                <br>
+                console.log('Hello, world!');
+                <br>
+                }, 1000);
+            </p>
+        </div>
+
+
+        <!-- Fourth Question Answer -->
+        <div class="p-8 bg-white rounded-lg flex flex-col gap-5">
+            <h2 class="font-semibold text-lg">04. What does the quizTimer() function do in your code?</h2>
+
+            <!-- Event Loop -->
+            <p class="text-[16px]">➡️ <span class="font-bold">quizTimer():</span> The quizTimer() function sets an
+                interval to run a callback function every second. The callback function updates a timer display on the
+                web page, adding one second to the timer each time it is called.</p>
+        </div>
+
+
+        <!-- Fivth Question Answer -->
+        <div class="p-8 bg-white rounded-lg flex flex-col gap-5">
+            <h2 class="font-semibold text-lg">05. What does the chooseQuiz() function do in your code?</h2>
+
+            <!-- Event Loop -->
+            <p class="text-[16px]">➡️ <span class="font-bold">chooseQuiz():</span> The chooseQuiz() function is a
+                JavaScript function that takes two arguments - index and give And. It updates the answers array with the
+                given answer for a particular quiz question. Finally, the function calls the displayAnswers() function,
+                passing the answers array as an argument, which displays the updated list of quiz questions and answers
+                to the user.</p>
+        </div>
+    </section>
+    <!-- blog content end -->
+
+    <!-- Footer section start -->
+    <footer class="py-10 text-center text-sm">
+        Copyright © 2023 Quiz Hero All Rights Reserved.
+    </footer>
+    <!-- Footer section end -->
+</body>
+
+</html>
